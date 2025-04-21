@@ -1,5 +1,16 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
-  ]
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "nodeVersion": "18.x"
+      }
+    }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }
